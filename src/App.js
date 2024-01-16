@@ -14,7 +14,6 @@ const App = () => {
   const obterJogadores = async () => {
     try {
       const response = await axios.get('http://localhost:8989/jogadores');
-      console.log(response.data);
       setJogadores(response.data);
     } catch (error) {
       console.error('Erro ao obter jogadores:', error);
@@ -23,16 +22,14 @@ const App = () => {
 
   const cadastrarJogador = async () => {
     try {
-      await axios.post('http://sua-api-laravel.com/jogadores', {
+      await axios.post('http://localhost:8989/cadastroJogador', {
         nome,
         nivel,
         goleiro,
       });
 
-      // Após o cadastro, atualize a lista de jogadores
       obterJogadores();
 
-      // Limpe os campos do formulário
       setNome('');
       setNivel('');
       setGoleiro(false);
@@ -52,7 +49,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Gerenciador de Jogadores</h1>
+      <h1>Gerenciador de Jogadoressssss</h1>
 
       <form>
         <label>
