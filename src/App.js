@@ -157,7 +157,6 @@ const App = () => {
         <div>
           <h2>Editar Jogador</h2>
           <form>
-            {/* Formulário de edição com os mesmos campos do cadastro */}
             <label>
               Nome:
               <input type="text" value={jogadorEditando.nome} onChange={(e) => setJogadorEditando({ ...jogadorEditando, nome: e.target.value })} />
